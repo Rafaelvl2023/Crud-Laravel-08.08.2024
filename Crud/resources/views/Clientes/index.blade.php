@@ -32,6 +32,9 @@
             transform: scale(1.05); /* Adiciona um leve aumento no tamanho do botão */
             transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
         }
+        .totalCadastros {
+            text-align: center
+        }
         table {
             border: 1px solid rgb(144, 195, 238);
             width: 80%;
@@ -75,10 +78,6 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .actions {
-            display: flex;
-            justify-content: space-around;
-        }
     </style>
 </head>
 <body>
@@ -86,6 +85,9 @@
         <h1>Lista de Clientes</h1>
         <div class="adicionar">
             <a href="{{ route('clientes.create') }}">Adicionar Cliente</a>
+        </div>
+        <div class="totalCadastros">
+            <h5>Total de Clientes Cadastrados: {{ $totalClientes }}</h5>
         </div>
         <table>
             <tr>
