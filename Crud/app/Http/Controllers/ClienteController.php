@@ -14,7 +14,7 @@ class ClienteController extends Controller
     public function index()
     {
         // O método all() no Eloquent é usado para recuperar todos os registros de uma tabela no banco de dados.
-        $clientes = Cliente::all();
+        $clientes = Cliente::paginate(2);
         $totalClientes = Cliente::count();
         // A função compact em PHP cria um array associativo a partir de variáveis e seus valores correspondentes.
         return view('clientes.index', compact('clientes', 'totalClientes'));

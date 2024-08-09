@@ -78,6 +78,7 @@
             margin: 0 auto;
             padding: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -119,6 +120,9 @@
             </tr>
             @endforeach
         </table>
+        <div class="paginacao">
+            {{ $clientes->onEachSide(0)->links('pagination::bootstrap-4') }}
+        </div>
     </div>
 </body>
 </html>

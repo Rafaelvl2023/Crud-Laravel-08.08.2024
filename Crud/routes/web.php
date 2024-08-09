@@ -19,3 +19,7 @@ Route::delete('/destroy/{cliente}', [ClienteController::class, 'destroy'])->name
 
 // As chaves {} na rota são usadas para definir parâmetros dinâmicos, é um parâmetro de rota que captura o ID do cliente que deve ser atualizado.
 // Isso permite que o controlador identifique qual recurso específico está sendo manipulado.
+
+// Route::get('/paginacao', function () {
+//     return view('paginacao');
+// });
